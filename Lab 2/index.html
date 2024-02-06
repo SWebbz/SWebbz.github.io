@@ -129,22 +129,37 @@
       <div class="further-info">
         <!-- insert images with srcsets and sizes -->
         <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img>
+          <img srcset="firefoxlogoonly120.png 120w, firefoxlogoonly400.png 400w"
+          sizes="(max-width: 500px) 120px, 400px"
+          src="firefoxlogoonly400.png"
+          alt="Firefox logo">
         </a>
         <a href="https://www.mozilla.org/">
-          <img>
+          <img srcset="mozilladinosaurhead120.png 120w, mozilladinosaurhead400.png, 400w"
+          sizes="(max-width: 500px) 120px, 400px"
+          src="mozilladinosaurhead400.png"
+          alt="Mozilla dinosaur head logo">
         </a>
         <a href="https://addons.mozilla.org/">
-          <img>
+          <img srcset="firefoxaddons120.jpg 120w, firefoxaddons400.jpg 400w"
+          sizes="(max-width: 500px) 120px, 400px"
+          src="firefoxaddons400.jpg"
+          alt="firefox addons logo">
         </a>
         <a href="https://developer.mozilla.org/en-US/">
-          <img>
+          <img src="mdn.svg"
+          alt="MDN logo">
         </a>
         <div class="clearfix"></div>
       </div>
 
       <div class="red-panda">
         <!-- insert picture element -->
+        <picture>
+          <source media="(max-width: 600ox)" srcset="redpandaportrait.jpg">
+          <source media="(min-width: 601px)" srcset="redpandalandscape.jpg">
+          <img src="redpandalandscape.jpg" alt="Red panda curled up in a tree">
+        </picture>
       </div>
 
     </main>
