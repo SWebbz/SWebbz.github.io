@@ -3,3 +3,10 @@ html {
 }
 
 /* Your CSS below here */
+div {
+  width: 200px;
+  height: 100px;
+  margin: auto;
+  text-align: center;
+  
+}
