@@ -6,7 +6,13 @@ html {
 div {
   width: 200px;
   height: 100px;
+  line-height: 100px;
   margin: auto;
   text-align: center;
-  
+  /* each rem is usually 16px, to get rem for 18px: 18/16=1.125*/
+  font-size: 1.1rem;
+  color: aliceblue;
+  text-shadow: 1px 1px 1px black;
+  border-radius: 10%;
+  background-color: blueviolet;
 }
