@@ -176,3 +176,15 @@ a[href^="http"] {
   background-size: 10px 10px;
   padding-right: 14px;
 }
+
+ul, ol {
+  margin: 16px;
+  padding-left: 10px;
+  list-style-type: circle;
+}
+
+li {
+  line-height: 1.6;
+}
+
+
