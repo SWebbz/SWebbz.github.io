@@ -116,10 +116,63 @@ header, footer {
   font-style: italic;
 }
 
+html{
+  font-size: 10px;
+}
+
 body {
   font-family: Cormorant Garamond, serif;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  word-spacing: 1px;
 }
 
 h1, h2 {
   font-family: Bevan, serif;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+section p{
+  text-indent: 20px;
+}
+
+a {
+  outline-color: transparent;
+}
+
+a:link{
+  color: #a30;
+}
+
+a:visited{
+  color: rgb(68, 26, 26);
+}
+
+a:focus {
+  text-decoration: none;
+} 
+
+a:hover{
+  text-decoration: none;
+  background: rgb(241, 182, 182);
+}
+
+a:active {
+  background: rgb(159, 3, 47);
+  color: #ffffff;
+}
+
+a[href^="http"] {
+  background: url("external-link-52.png") no-repeat 100% 0;
+  background-size: 10px 10px;
+  padding-right: 14px;
 }
