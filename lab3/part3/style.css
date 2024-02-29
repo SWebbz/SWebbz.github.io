@@ -115,3 +115,11 @@ header, footer {
   font-weight: 700;
   font-style: italic;
 }
+
+body {
+  font-family: Cormorant Garamond, serif;
+}
+
+h1, h2 {
+  font-family: Bevan, serif;
+}
