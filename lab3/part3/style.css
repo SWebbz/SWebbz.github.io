@@ -146,7 +146,7 @@ section p{
 }
 
 a {
-  outline-color: transparent;
+  outline: none;
 }
 
 a:link{
