@@ -8,10 +8,10 @@ const overlay = document.querySelector('.overlay');
 /* Declaring the alternative text for each image file */
 //in one variable
 const files = [{
-    src: 'pic1.jpg', alt: 'Closeup of a blue human eye'}, {src:'pic2.jpg', alt: 'Closeup of rock swirls'}, 
-    {src: 'pic3.jpg', alt: 'Closeup of purple flowers'},
-    {src: 'pic4.jpg', alt: 'Ancient Egyptian drawings on a wall'}, 
-    {src: 'pic5.jpg', alt: 'A brown moth on a  green leaf'}]
+    src: 'images/pic1.jpg', alt: 'Closeup of a blue human eye'}, {src: 'images/pic2.jpg', alt: 'Closeup of rock swirls'}, 
+    {src: 'images/pic3.jpg', alt: 'Closeup of purple flowers'},
+    {src: 'images/pic4.jpg', alt: 'Ancient Egyptian drawings on a wall'}, 
+    {src: 'images/pic5.jpg', alt: 'A brown moth on a  green leaf'}]
 
 /* Looping through images */
 for (const file of files)
@@ -22,7 +22,7 @@ for (const file of files)
     thumbBar.appendChild(newImage);
 
     newImage.addEventListener("click", () => {displayedImage.src = file.src;
-    displayedImage.alt = file.alt})
+     displayedImage.alt = file.alt})
 }
 
 
