@@ -1,13 +1,13 @@
 // setup canvas
 
+const paragraph = document.querySelector("p");
+let ballCount = 0;
+
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
-
-const paragraph = document.querySelector("p");
-let ballCount = 0
 
 // function to generate random number
 
@@ -30,7 +30,7 @@ class Shape {
   }
 }
 
-class Ball extends Shape{
+class Ball extends Shape {
   constructor(x, y, velX, velY, color, size) {
     super(x, y, velX, velY);
     this.color = color;
@@ -109,27 +109,27 @@ class EvilCircle extends Shape {
   
   draw() {
     ctx.beginPath();
-    ctx.lineWidth = 3;
     ctx.strokeStyle = this.color;
+    ctx.lineWidth = 3;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.stroke();
   }
 
   checkBounds() {
     if ((this.x + this.size) >= width) {
-      this.x = -(this.size);
+      this.x -= this.size;
     }
   
     if ((this.x - this.size) <= 0) {
-      this.x = -(this.size);
+      this.x += this.size;
     }
   
     if ((this.y + this.size) >= height) {
-      this.y = -(this.size);
+      this.y -= this.size;
     }
   
     if ((this.y - this.size) <= 0) {
-      this.y = -(this.size);
+      this.y += this.size;
     }
   
   }
@@ -143,8 +143,8 @@ class EvilCircle extends Shape {
   
         if (distance < this.size + ball.size) {
           ball.exists = false;
-          count--;
-          paragraph.textContent = `There are ${count} balls on the page!`
+          ballCount--;
+          paragraph.textContent = `There are ${ballCount} balls on the page!`;
         }
       }
     }
@@ -168,13 +168,13 @@ while (balls.length < 25) {
   );
 
   balls.push(ball);
-  count++;
-  paragraph.textContent =  `There are ${count} balls on the page!`
+  ballCount++;
+  paragraph.textContent =  `There are ${ballCount} balls on the page!`;
 }
 
 const evilCircle = new EvilCircle(
-  random(0 + size, width - size), 
-  random(0 + size, height - size)
+  random(0, width), 
+  random(0, height)
   );
 
 function loop() {
@@ -182,7 +182,7 @@ function loop() {
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
-    if(ball.exists){
+    if (ball.exists) {
       ball.draw();
       ball.update();
       ball.collisionDetect();
